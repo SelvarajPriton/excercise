@@ -17,6 +17,10 @@ import com.javatechie.spring.mockito.api.service.UserService;
 public class UserController {
 	@Autowired
 	private UserService service;
+	@GetMapping
+	public String sayHello(){
+		return "Hello";
+	}
 
 	@PostMapping(value = "/save")
 	public User saveUser(@RequestBody User user) {
