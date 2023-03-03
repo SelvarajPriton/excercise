@@ -22,6 +22,11 @@ public class UserController {
 		return "Hello";
 	}
 
+	@GetMapping
+	public String sayHi(){
+		return "Hi";
+	}
+
 	@PostMapping(value = "/save")
 	public User saveUser(@RequestBody User user) {
 		return service.addUser(user);
